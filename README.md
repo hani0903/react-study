@@ -1,12 +1,12 @@
 # 리액트 정리 노트
 
-Udemy의 React 강의를 수강하며 정리한 노트와 코드 샘플, 그리고 학습 진행 상황을 기록하기 위해 만든 레포지토리입니다.
+Udemy의 React 강의를 수강하며 정리한 노트와 코드 샘플, 그리고 학습 진행 상황을 기록하기 위해 만든 레포지토리입니다!
 
 ## 📝 강의 개요
 - **강의명:** React - The Complete Guide 2024 (incl. Next.js, Redux)
 - **강사:** Maximilian Schwarzmuller
 - **플랫폼:** [Udemy]([https://www.udemy.com/course/best-react/](https://www.udemy.com/course/react-the-complete-guide-incl-redux/?couponCode=OF83024D))
-- **목표:** React의 기본 개념을 이해하고 실습을 통해 실무에 적용할 수 있는 능력 배양 
+- **목표:** React의 기본 개념을 이해하고 실습을 통해 실무에 적용할 수 있는 능력 함양 
 
 ## 🚀 스터디 계획
 1. **일일 정리:** 매일 강의를 수강한 후 강의 내용을 요약하여 `/notes`에 커밋할 예정입니다.
@@ -17,7 +17,7 @@ Udemy의 React 강의를 수강하며 정리한 노트와 코드 샘플, 그리�
 ```
 react-course-notes/
 │
-├── src/                       # 코드 예제 및 실습 파일
+├── practice/                       # 코드 예제 및 실습 파일
 │   ├── components/            # React 컴포넌트
 │   │   ├── Header.js
 │   │   ├── Footer.js
