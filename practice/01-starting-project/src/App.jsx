@@ -2,7 +2,7 @@ import componentsImg from './assets/Components.png';
 import { CORE_CONCEPTS } from './data.js';
 
 // 컴포넌트 분리
-import Header from'./components/Header.jsx';
+import Header from'./components/Header/Header.jsx';
 import CoreConcept from'./components/CoreConcept.jsx';
 
 function App() {
