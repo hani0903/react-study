@@ -1,5 +1,8 @@
 import reactImg from '../assets/react-core-concepts.png';
 
+// Header css 적용하기
+import "./Header.css";
+
 const reactDescriptions = ['Fundamental', 'Crucial', 'Core'];
 
 function genRandomInt(max) {
