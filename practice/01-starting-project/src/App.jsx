@@ -6,10 +6,15 @@ import Header from'./components/Header/Header.jsx';
 import CoreConcept from'./components/CoreConcept.jsx';
 import TabButton from'./components/TabButton.jsx';
 
+import { useState } from 'react';
+
 function App() {
 
-  function handleSelect() {
-    console.log('클릭');
+  let [selectedTopic, setSelectedTopic] = useState('please click a button');
+
+  function handleSelect(selectedButton) {
+    setSelectedTopic(selectedButton);
+    console.log(selectedButton);
   } 
 
   return (
@@ -37,12 +42,12 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={handleSelect}>Components</TabButton>
-            <TabButton onSelect={handleSelect}>JSX</TabButton>
-            <TabButton onSelect={handleSelect}>Props</TabButton>
-            <TabButton onSelect={handleSelect}>State</TabButton>
+            <TabButton onSelect={() => handleSelect('Components')}>Components</TabButton>
+            <TabButton onSelect={() => handleSelect('JSX')}>JSX</TabButton>
+            <TabButton onSelect={() => handleSelect('Props')}>Props</TabButton>
+            <TabButton onSelect={() => handleSelect('State')}>State</TabButton>
           </menu>
-          Dynamic Content
+          {selectedTopic}
         </section>
         <h2>Time to get started!</h2>
       </main>
