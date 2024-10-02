@@ -11,7 +11,7 @@ import { EXAMPLES } from './data.js';
 
 function App() {
 
-  let [selectedTopic, setSelectedTopic] = useState('components');
+  let [selectedTopic, setSelectedTopic] = useState();
 
   function handleSelect(selectedButton) {
     setSelectedTopic(selectedButton);
@@ -43,12 +43,13 @@ function App() {
         <section id="examples">
           <h2>Examples</h2>
           <menu>
-            <TabButton onSelect={() => handleSelect('Components')}>Components</TabButton>
-            <TabButton onSelect={() => handleSelect('JSX')}>JSX</TabButton>
-            <TabButton onSelect={() => handleSelect('Props')}>Props</TabButton>
-            <TabButton onSelect={() => handleSelect('State')}>State</TabButton>
+            <TabButton isSelected = {selectedTopic === 'components'} onSelect={() => handleSelect('components')}>Components</TabButton>
+            <TabButton isSelected = {selectedTopic === 'jsx'} onSelect={() => handleSelect('jsx')}>JSX</TabButton>
+            <TabButton isSelected = {selectedTopic === 'props'} onSelect={() => handleSelect('props')}>Props</TabButton>
+            <TabButton isSelected = {selectedTopic === 'state'} onSelect={() => handleSelect('state')}>State</TabButton>
           </menu>
-          <div id="tab-content">
+          {!selectedTopic ? (<p>Please select a topic</p>) :
+          ( <div id="tab-content">
             <h3>{EXAMPLES[selectedTopic].title}</h3>
             <p>{EXAMPLES[selectedTopic].description}</p>
             <pre>
@@ -57,6 +58,7 @@ function App() {
               </code>
             </pre>
           </div>
+          )}
         </section>
         <h2>Time to get started!</h2>
       </main>
